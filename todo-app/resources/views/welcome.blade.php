@@ -83,10 +83,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Todo App
+                    Todo <span style="color: red;">App</span>
                 </div>
                 <div class="bottom-right links">
-                    <a href="{{ url('/todos') }}">Todo</a>
+                    <a href="{{ url('/todos') }}">Let's Complete Your Task Here</a>
                 </div>
 
 
