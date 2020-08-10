@@ -1,0 +1,32 @@
+
+# For Create a Controller
+php artisan make:controller ControllerName
+
+#For Create a Model
+php artisan make:model ModelName
+
+#For Create Migration File
+php artisan make:migration create_tableName_table
+php artisan migrate
+
+#Factory and Seeders
+  #For Create a factory
+  php artisan make:Factory factoryName
+  
+  #For create a Seeder
+  php artisan make:seed SeederName
+  
+  *** Working Process
+    //Into Model Seeder
+    public function run()
+    {
+        factory(App\Todo::class, 10)->create();
+    }
+    
+    //into Database Seeder
+     public function run()
+    {
+        $this->call(TodosSeeder::class);
+    }
+  
+  php artisan db:seed
