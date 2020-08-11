@@ -19,6 +19,10 @@ class TodosController extends Controller
     	return view('todos.show')->with('todo', $todo);
     }
 
+
+
+
+
     public function create(){
     	return view('todos.create');
     }
@@ -42,6 +46,10 @@ class TodosController extends Controller
 
     }
 
+
+
+
+
     public function edit($todoId){
     	$todo = Todo::find($todoId);
 
@@ -64,5 +72,14 @@ class TodosController extends Controller
     	$todo->save();
     	return redirect('/todos');
 
+    }
+
+
+
+    public function destroy($todoId){
+    	$todo = Todo::find($todoId);
+    	$todo->delete();
+
+    	return redirect('/todos');
     }
 }
