@@ -14,8 +14,9 @@ class TodosController extends Controller
     }
 
 
-    public function show($todoId){
-    	$todo = Todo::find($todoId);
+    public function show(Todo $todo){
+    	//Todo $todo   ** This is called route model binding
+    	//$todo = Todo::find($todoId);  ==== Todo $todo
     	return view('todos.show')->with('todo', $todo);
     }
 
