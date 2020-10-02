@@ -33,3 +33,11 @@ php artisan migrate
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
